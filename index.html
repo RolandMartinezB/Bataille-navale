@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="battle.css" type="text/css" />
+       
+    <title>BattleShip</title>
 </head>
 <body>
-    <h3>Hola Mundo</h3>
+    <h3>BattleShip</h3>
+    <div class="pricipale">
+        <script>
+            let tamano = 10;
+            document.write("<table border>");
+            for (let i = 0; i < tamano; i++) {
+                document.write("<tr>"+i);
+                    for (let j = 0; j < tamano; j++) {
+                        document.write("<td class='test'>"+i+j);
+                      //  document.write(res);
+                       // res--;
+                        document.write("</td>");
+                    }
+                    document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+    </div>
+    
 </body>
 </html>
