@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="battle.css" type="text/css" />
-       
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="battle.css" />
     <title>BattleShip</title>
-</head>
-<body>
-    <h3>BattleShip</h3>
-    <div class="pricipale">
+  </head>
+  <body>
+    <div>
+      <div class="card-header img-fluid">
+        <h3 class="card-title text-center">BattleShip</h3>
+        <img class="card-img-top" src="./images/naval3.jpg" alt="Card image" />
+      </div>
+
+      <div class="align-content-center"></div>
+      <div class="container">
         <script>
-            let tamano = 10;
-            document.write("<table border>");
-            for (let i = 0; i < tamano; i++) {
-                document.write("<tr>"+i);
-                    for (let j = 0; j < tamano; j++) {
-                        document.write("<td class='test'>"+i+j);
-                      //  document.write(res);
-                       // res--;
-                        document.write("</td>");
-                    }
-                    document.write("</tr>");
+          let tamano = 10;
+          document.write(
+            "<table class='table table-info table-bordered table-hover'>"
+          );
+          document.write("<tbody>");
+          for (let i = 0; i < tamano; i++) {
+            document.write("<tr>" + i);
+            for (let j = 0; j < tamano; j++) {
+              document.write("<td>");
+              //document.write("<td class='test'>" + i + j);
+              //  document.write(res);
+              // res--;
+              document.write("</td>");
             }
-            document.write("</table>");
+            document.write("</tr>");
+          }
+          document.write("</tbody>");
+          document.write("</table>");
         </script>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

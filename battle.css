@@ -1,9 +1,12 @@
-body{
-    background-color: #F0F8FF;
+body {
+  background-color: #f0f8ff;
 }
 
-div {
- display: block;
- background-color: rgb(180, 180, 204);
+h3 {
+  font-family: "Press Start 2P", cursive;
+  color: #5218fa;
 }
 
+.tete-img {
+  background-image: url("./images/naval1.jpg");
+}
