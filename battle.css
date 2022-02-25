@@ -1,12 +1,28 @@
 body {
-  background-color: #f0f8ff;
+  background: url("./images/radar-3.jpg") no-repeat;
 }
 
 h3 {
   font-family: "Press Start 2P", cursive;
-  color: #5218fa;
+  color: gold;
 }
 
-.tete-img {
-  background-image: url("./images/naval1.jpg");
+div#board {
+  position: relative;
+  width: 1024px;
+  height: 50px;
+  margin: auto;
+}
+
+table {
+  position: absolute;
+  left: 173px;
+  top: 98px;
+  border-spacing: 0px;
+  border: 2;
+  border-color: chartreuse;
+}
+td {
+  width: 59px;
+  height: 59px;
 }

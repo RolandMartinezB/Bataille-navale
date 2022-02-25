@@ -23,31 +23,41 @@
     <div>
       <div class="card-header img-fluid">
         <h3 class="card-title text-center">BattleShip</h3>
-        <img class="card-img-top" src="./images/naval3.jpg" alt="Card image" />
+        <!--    <img class="card-img-top" src="./images/radar-3.jpg" alt="Card image" />-->
       </div>
 
-      <div class="align-content-center"></div>
       <div class="container">
-        <script>
-          let tamano = 10;
-          document.write(
-            "<table class='table table-info table-bordered table-hover'>"
-          );
-          document.write("<tbody>");
-          for (let i = 0; i < tamano; i++) {
-            document.write("<tr>" + i);
-            for (let j = 0; j < tamano; j++) {
-              document.write("<td>");
-              //document.write("<td class='test'>" + i + j);
-              //  document.write(res);
-              // res--;
-              document.write("</td>");
+        <div>
+          <script>
+            let tamano = 10;
+            let body = document.getElementsByTagName("body")[0];
+            let divi = document.createElement("div");
+            let table = document.createElement("table");
+            let tblBody = document.createElement("tbody");
+
+            for (let i = 0; i < tamano; i++) {
+              let ligne = document.createElement("tr");
+              for (let j = 0; j < tamano; j++) {
+                let celda = document.createElement("td");
+                //celda.setAttribute("id", i + "" + j);
+                var textoCelda = document.createTextNode("pos " + i + " " + j);
+                var textoCelda1 = i + "" + j;
+                celda.appendChild(textoCelda);
+                celda.setAttribute("id", textoCelda1);
+                celda.setAttribute("onClick", "reply_click(this.id)");
+                ligne.appendChild(celda);
+              }
+              tblBody.appendChild(ligne);
             }
-            document.write("</tr>");
-          }
-          document.write("</tbody>");
-          document.write("</table>");
-        </script>
+            table.setAttribute("id", "tableid");
+            table.appendChild(tblBody);
+            divi.setAttribute("id", "board");
+            divi.appendChild(table);
+            table.setAttribute("border", "2");
+            body.appendChild(divi);
+          </script>
+        </div>
+        <script src="./battleship.js"></script>
       </div>
     </div>
   </body>
